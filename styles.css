@@ -50,19 +50,16 @@ img {
 }
 
 main {
-    /*border: 2px solid green;*/
-    width: 22rem;
+    width: 24rem;
 }
 
 .container {
     display: grid;
-    margin-right: 0.75px;
 }
 
 .testimonial-card {
-    /*border: 2px solid red;*/
     margin: 0.7rem;
-    padding: 0.8em;
+    padding: 1.5em;
     border-radius: 5px;
 }
 
@@ -70,6 +67,10 @@ main {
     display: flex;
     margin-left: 0.2em;
     margin-top: 0.4em;
+}
+
+.card-content p {
+    line-height: 1.5rem;
 }
 
 .bio {
@@ -110,7 +111,7 @@ main {
 }
 
 footer {
-    margin: 1rem 2rem;
+    margin: 1rem auto;
     width: 15rem;
     font-size: 11px; 
     text-align: center;
@@ -118,4 +119,52 @@ footer {
 
 footer a {
     color: hsl(228, 45%, 44%);
+}
+
+
+@media (min-width: 576px) {
+
+    main {
+        width: 84rem;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .testimonial-card {
+        margin: 1rem;
+    }
+
+    #daniel {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-image: url("./images/bg-pattern-quotation.svg");
+        background-repeat: no-repeat;
+        background-position: 85% 0%;
+        background-size: 7rem 8.5rem;
+    }
+    
+    #jeanette {
+        grid-row-start: 2;
+    }
+    
+    #patrick {
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+    
+    #kira {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 4;
+    }
+
+    footer {
+        margin: 1rem auto ;
+        align-content: center;
+        width: 30rem
+    }
+
 }
